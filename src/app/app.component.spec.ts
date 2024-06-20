@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
+// https://www.youtube.com/watch?v=PdVerlfmO6M&list=PLtlqfp1XEW4hXv8C2-gJVdLTzTVzihoH8&ab_channel=TheRyanSmee
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
 
