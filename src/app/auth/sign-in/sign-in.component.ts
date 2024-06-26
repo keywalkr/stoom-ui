@@ -1,17 +1,11 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { AuthService } from "../../core/auth/auth.service";
 import { MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle } from "@angular/material/card";
 import { MatError, MatFormField, MatLabel } from "@angular/material/form-field";
 import { MatInput } from "@angular/material/input";
 import { MatButton } from "@angular/material/button";
-
-
-export interface SignInData {
-  username: FormControl<string | any>;
-  password: FormControl<string | any>;
-}
-
+import { SignInModel } from "./sign-in.model";
 
 @Component({
   selector: 'app-sign-in',
@@ -35,7 +29,7 @@ export interface SignInData {
 })
 export class SignInComponent {
 
-  signInForm: FormGroup<SignInData>;
+  signInForm: FormGroup<SignInModel>;
   submitted: boolean = false;
   loading: boolean = false;
   error: string = '';
@@ -80,6 +74,10 @@ export class SignInComponent {
           }
         })
     }
+  }
+
+  isControlInvalid(control: string, error: string) {
+    return this.signInForm.get(control)?.hasError(error);
   }
 
 }

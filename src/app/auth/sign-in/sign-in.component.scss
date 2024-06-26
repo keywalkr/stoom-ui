@@ -1,3 +1,43 @@
+.form-section {
+  height: 100vh;
+  align-items: center;
+
+  .auth-section {
+
+    mat-card {
+      padding: 12px 18px;
+    }
+  }
+}
+
+.mat-mdc-card-header {
+  flex-direction: column;
+  padding: 50px;
+  padding-bottom: 100px;
+
+  .mat-mdc-card-title,
+  .mat-mdc-card-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mat-mdc-card-title {
+    padding-bottom: 30px;
+
+    img {
+      width: 100%;
+      max-width: 86px;
+      height: auto;
+    }
+  }
+
+  .mat-mdc-card-subtitle {
+    font-size: 45px;
+    font-weight: bold;
+  }
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -8,13 +48,6 @@
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
-}
-
-.form-section {
-  height: 100vh;
-  background-color: #ffffff;
-  //align-items: center;
-  padding-top: 30px;
 }
 
 .form-content {
@@ -41,9 +74,10 @@
 }
 
 .image-section {
-  background-image: url("/assets/img/auth/login-modal-image.jpg");
+  background-image: url("/img/bg/bg_sec.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .form-call-to-action {
@@ -63,4 +97,17 @@
 
 .sign-in-btn {
   margin-inline-start: auto;
+}
+
+@media screen and (max-width: 992px) and (min-width: 600px), (min-width: 1100px) and (orientation: landscape) {
+  .form-section {
+    //background-color: #ffffff;
+
+    .auth-section {
+      //padding: 50px 50px 0;
+    }
+  }
+  .image-section {
+    visibility: hidden;
+  }
 }

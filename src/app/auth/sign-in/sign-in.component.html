@@ -1,24 +1,29 @@
 <div class="row no-gutters form-section">
-  <div class="ol-md-7 col-lg-6 col-sm-12">
+  <div class="ol-md-7 col-lg-6 col-sm-12 auth-section">
     <mat-card class="kea-form">
       <mat-card-header>
-        <mat-card-title>Logo</mat-card-title>
-        <mat-card-subtitle>Name</mat-card-subtitle>
+        <mat-card-title><img alt="stoom" src="img/stoom_logo.png"/></mat-card-title>
+        <mat-card-subtitle>stoom</mat-card-subtitle>
       </mat-card-header>
+
       <mat-card-content class="form-content">
-        <form (ngSubmit)="onSubmit()" [formGroup]="signInForm">
+        <form [formGroup]="signInForm">
           <div class="form-row">
             <mat-form-field appearance="outline">
               <mat-label>Username</mat-label>
               <input formControlName="username" matInput required type="text">
-              <mat-error></mat-error>
+              <mat-error>@if (isControlInvalid('username', 'required')) {
+                Username is required
+              } </mat-error>
             </mat-form-field>
           </div>
           <div class="form-row">
             <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
               <input formControlName="password" matInput required type="password">
-              <mat-error></mat-error>
+              <mat-error>@if (isControlInvalid('password', 'required')) {
+                Password is required
+              }</mat-error>
             </mat-form-field>
           </div>
         </form>
@@ -28,9 +33,12 @@
           <a class="link-text" href="#">Forgot password?</a>
         </div>
         <div class="form-call-to-action">
-          <button [disabled]="!signInForm.valid" class="sign-in-btn" color="primary" mat-raised-button>Sign In</button>
+          <button (click)="onSubmit()"
+                  [disabled]="!signInForm.valid"
+                  class="sign-in-btn" color="primary"
+                  mat-flat-button>Sign In
+          </button>
         </div>
-
       </div>
 
     </mat-card>
