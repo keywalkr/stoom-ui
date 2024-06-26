@@ -1,0 +1,41 @@
+<div class="row no-gutters form-section">
+  <div class="ol-md-7 col-lg-6 col-sm-12">
+    <mat-card class="kea-form">
+      <mat-card-header>
+        <mat-card-title>Logo</mat-card-title>
+        <mat-card-subtitle>Name</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="form-content">
+        <form (ngSubmit)="onSubmit()" [formGroup]="signInForm">
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>Username</mat-label>
+              <input formControlName="username" matInput required type="text">
+              <mat-error></mat-error>
+            </mat-form-field>
+          </div>
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input formControlName="password" matInput required type="password">
+              <mat-error></mat-error>
+            </mat-form-field>
+          </div>
+        </form>
+      </mat-card-content>
+      <div>
+        <div style="text-align: right; top: -25px; position: relative; font-size: 13px">
+          <a class="link-text" href="#">Forgot password?</a>
+        </div>
+        <div class="form-call-to-action">
+          <button [disabled]="!signInForm.valid" class="sign-in-btn" color="primary" mat-raised-button>Sign In</button>
+        </div>
+
+      </div>
+
+    </mat-card>
+  </div>
+  <div class=" col-md-5 col-lg-6 d-none d-md-block image-section">
+    Image Section
+  </div>
+</div>

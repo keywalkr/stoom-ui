@@ -1,5 +1,5 @@
-export interface Environment {
-  production: boolean;
-  name: string
-  apiPath: string
-}
+export const environment = {
+  production: true,
+  name: 'Production',
+  apiPath: '',
+};
