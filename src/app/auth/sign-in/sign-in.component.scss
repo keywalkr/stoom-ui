@@ -1,13 +1,23 @@
-.form-section {
-  height: 100vh;
-  align-items: center;
+//.form-section {
+//  height: 100vh;
+//  align-items: center;
+//
+//  .auth-section {
+//
+//    mat-card {
+//      padding: 12px 18px;
+//    }
+//  }
+//}
 
-  .auth-section {
-
-    mat-card {
-      padding: 12px 18px;
-    }
-  }
+.kea-form {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0;
+  padding: 10px;
+  background-color: #999999;
+  width: 100%;
+  //min-width: 500px;
 }
 
 .mat-mdc-card-header {
@@ -56,10 +66,6 @@
   margin-top: 16px;
 }
 
-.kea-form {
-  box-shadow: 0 0 0;
-}
-
 .form-row {
   display: flex;
   flex-direction: row;
@@ -71,13 +77,6 @@
 
 .form-row mat-form-field {
   width: 100%;
-}
-
-.image-section {
-  background-image: url("/img/bg/bg_sec.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom right;
 }
 
 .form-call-to-action {
@@ -99,15 +98,3 @@
   margin-inline-start: auto;
 }
 
-@media screen and (max-width: 992px) and (min-width: 600px), (min-width: 1100px) and (orientation: landscape) {
-  .form-section {
-    //background-color: #ffffff;
-
-    .auth-section {
-      //padding: 50px 50px 0;
-    }
-  }
-  .image-section {
-    visibility: hidden;
-  }
-}
