@@ -1,0 +1,11 @@
+.auth-page {
+  display: flex;
+  background-color: #c55c5c !important;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-page .container {
+  background-color: #8bc65b !important;
+}

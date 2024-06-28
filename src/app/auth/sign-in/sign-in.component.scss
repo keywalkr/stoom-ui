@@ -1,100 +1,23 @@
-//.form-section {
-//  height: 100vh;
-//  align-items: center;
-//
-//  .auth-section {
-//
-//    mat-card {
-//      padding: 12px 18px;
-//    }
-//  }
-//}
 
-.kea-form {
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0 0;
-  padding: 10px;
-  background-color: #999999;
+.mat-form-field {
   width: 100%;
-  //min-width: 500px;
+  min-width: 300px;
 }
 
-.mat-mdc-card-header {
-  flex-direction: column;
-  padding: 50px;
-  padding-bottom: 100px;
-
-  .mat-mdc-card-title,
-  .mat-mdc-card-subtitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mat-mdc-card-title {
-    padding-bottom: 30px;
-
-    img {
-      width: 100%;
-      max-width: 86px;
-      height: auto;
-    }
-  }
-
-  .mat-mdc-card-subtitle {
-    font-size: 45px;
-    font-weight: bold;
-  }
-}
-
-.row {
+mat-mdc-card-title,
+mat-mdc-card-content {
   display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  justify-content: center;
 }
 
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
+.error {
+  padding: 16px;
+  width: 300px;
+  color: white;
+  background-color: red;
 }
 
-.form-content {
-  padding-right: 0;
-  padding-left: 0;
-  margin-top: 16px;
-}
-
-.form-row {
+.button {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 20px;
-  margin-bottom: 10px;
+  justify-content: flex-end;
 }
-
-.form-row mat-form-field {
-  width: 100%;
-}
-
-.form-call-to-action {
-  display: flex;
-  align-items: baseline;
-  margin-top: 30px;
-
-  button {
-    width: 100%;
-    border-radius: 5px;
-  }
-}
-
-.link-text {
-  color: var(--link-text-color);
-}
-
-.sign-in-btn {
-  margin-inline-start: auto;
-}
-

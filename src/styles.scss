@@ -9,10 +9,28 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.stoom-content {
-  height: 100%;
-  background-color: #4e4d4d;
+* {
+  box-sizing: border-box;
 }
+
+.stoom-content {
+  padding: 16px !important;
+}
+
+/*
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.stoom-content {
+  display: flex;
+  background-color: #c55c5c !important;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
 
 mat-form-field {
   --mat-form-field-container-height: 40px;
@@ -23,3 +41,4 @@ mat-form-field {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+ */

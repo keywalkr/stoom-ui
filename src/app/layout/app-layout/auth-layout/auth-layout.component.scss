@@ -1,3 +1,10 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+}
+
+/**
 stoom-auth-layout {
   display: flex;
   width: 100%;
@@ -5,13 +12,14 @@ stoom-auth-layout {
 
 .form-section {
   display: flex;
-  flex-direction: row;
-  //align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  height: 100%;
-  //width: 100%;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100wv;
   background-color: #006600;
+  background-image: url("/img/bg/bg_sec.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
 
   .auth-section {
     display: flex;
@@ -19,16 +27,7 @@ stoom-auth-layout {
     justify-content: center;
     align-items: center;
     height: 100%;
-    //width: 50%;
-  }
-
-  .image-section {
-    height: 100%;
-    background-image: url("/img/bg/bg_sec.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -38,3 +37,4 @@ stoom-auth-layout {
 //    visibility: hidden;
 //  }
 //}
+ */
