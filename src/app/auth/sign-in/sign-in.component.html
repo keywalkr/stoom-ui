@@ -5,8 +5,8 @@
     </mat-card-title>
     <mat-card-subtitle>stoom</mat-card-subtitle>
   </mat-card-header>
-  <div class="error">
-    Invalid Credentials
+  <div [hidden]="hide" class="error">
+    {{ error }}
   </div>
   <mat-card-content>
     <form [formGroup]="signInForm">

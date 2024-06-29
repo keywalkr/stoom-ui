@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
   name: 'development',
-  apiPath: 'localhost:3000',
+  apiPath: 'https://api.escuelajs.co/api/v1',
 };

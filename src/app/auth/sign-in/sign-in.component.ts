@@ -7,6 +7,7 @@ import { MatInput } from "@angular/material/input";
 import { MatButton, MatIconButton } from "@angular/material/button";
 import { SignInModel } from "./sign-in.model";
 import { MatIcon } from "@angular/material/icon";
+import { HttpErrorResponse } from "@angular/common/http";
 
 @Component({
   selector: 'app-sign-in',
@@ -53,6 +54,7 @@ export class SignInComponent {
   onSubmit() {
     this.submitted = true;
     this.loading = true;
+    this.hide = true;
 
     if (this.signInForm.invalid) {
       this.error = 'Username and Password not valid!'
@@ -62,18 +64,21 @@ export class SignInComponent {
         .subscribe({
           next: res => {
             if (res) {
+
               setTimeout(() => {
                 // get role
                 // token
               }, 1000)
 
             } else {
+              this.hide = false;
               this.error = 'Invalid Login'
             }
 
           },
           error: err => {
-            this.error = err;
+            this.hide = false;
+            this.error = this.getErrorMessage((<HttpErrorResponse>err).status);
             this.submitted = false;
             this.loading = false;
           }
@@ -87,5 +92,16 @@ export class SignInComponent {
 
   switchPass() {
     this.passwordVisible.set(!this.passwordVisible());
+  }
+
+  getErrorMessage(status: number): string {
+    switch (status) {
+      case 401:
+        return "Invalid Login";
+      case 404:
+        return "Technical Error";
+      default:
+        return "Unknown Error";
+    }
   }
 }

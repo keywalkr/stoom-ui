@@ -13,7 +13,7 @@ export class LoginApiService {
   constructor(protected _http: HttpClient) {
   }
 
-  login(username: string, password: string) {
-    return this._http.post<Token>(`${this.baseUrl}/auth/login`, {username, password});
+  login(email: string, password: string) {
+    return this._http.post<Token>(`${this.baseUrl}/auth/login`, {email, password});
   }
 }
