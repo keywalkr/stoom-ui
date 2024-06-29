@@ -1,0 +1,46 @@
+.toolbar {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px 0 #aaaaaa !important;
+  width: 100%;
+  opacity: 0.85;
+  height: 60px;
+  z-index: 12;
+
+  .logo {
+    background-color: #9c2d2d !important;
+  }
+
+  mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 10px;
+    width: 100%;
+
+
+  }
+}
+
+.hbm {
+  display: none;
+  align-items: center;
+}
+
+@media (max-width: 599px) {
+  .mat-toolbar-row, .mat-toolbar-single-row {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hbm {
+    display: flex;
+  }
+
+  .nb-menu-items {
+    display: none;
+  }
+}

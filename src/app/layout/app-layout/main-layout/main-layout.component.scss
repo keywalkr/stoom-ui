@@ -1,0 +1,10 @@
+$top: 60px;
+
+.main-content {
+  display: flex;
+  position: relative;
+  top: $top;
+  height: calc(100vh - #{$top});
+  padding: 15px;
+  background-color: antiquewhite;
+}
