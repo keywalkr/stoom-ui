@@ -1,40 +1,16 @@
-:host {
+@mixin center() {
   display: flex;
   justify-content: center;
-  margin: 100px 0px;
-}
-
-/**
-stoom-auth-layout {
-  display: flex;
-  width: 100%;
-}
-
-.form-section {
-  display: flex;
   align-items: center;
-  min-height: 100vh;
-  min-width: 100wv;
-  background-color: #006600;
-  background-image: url("/img/bg/bg_sec.jpg");
+}
+
+
+.auth-main {
+  @include center();
+  height: 100%;
+  width: 100%;
+  background-image: url('../../../../../public/images/bg/bg_sec.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom right;
-
-  .auth-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-  }
 }
-
-
-//@media screen and (max-width: 992px) and (min-width: 600px), (min-width: 1100px) and (orientation: landscape) {
-//  .image-section {
-//    visibility: hidden;
-//  }
-//}
- */

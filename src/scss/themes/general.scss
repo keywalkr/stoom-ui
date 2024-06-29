@@ -1,0 +1,53 @@
+* {
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  color: $black;
+
+  &:hover {
+    outline: none;
+    text-decoration: none;
+  }
+
+  &:not([href]) {
+    color: inherit;
+  }
+}
+
+p {
+  font-size: 14px;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+  color: var(--pc-heading-color);
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+mat-form-field {
+  --mat-form-field-container-height: 40px;
+  --mat-form-field-container-vertical-padding: 8px;
+  margin-top: 15px;
+}
+
+.mat-mdc-card-content {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

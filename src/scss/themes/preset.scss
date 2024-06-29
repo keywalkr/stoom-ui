@@ -1,0 +1,10 @@
+@import "scss/settings/color-variables";
+
+:root {
+  @each $color, $value in $preset-colors {
+    $pc-primary: map-get($value, 'primary');
+    $color-rgb: to-rgb($pc-primary);
+    --bs-blue: #{$pc-primary};
+    --bs-primary-rgb: #{$color-rgb};
+  }
+}

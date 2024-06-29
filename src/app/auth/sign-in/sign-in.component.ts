@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { AuthService } from "../../core/auth/auth.service";
 import { MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle } from "@angular/material/card";
-import { MatError, MatFormField, MatLabel } from "@angular/material/form-field";
+import { MatError, MatFormField, MatLabel, MatSuffix } from "@angular/material/form-field";
 import { MatInput } from "@angular/material/input";
-import { MatButton } from "@angular/material/button";
+import { MatButton, MatIconButton } from "@angular/material/button";
 import { SignInModel } from "./sign-in.model";
+import { MatIcon } from "@angular/material/icon";
 
 @Component({
   selector: 'app-sign-in',
@@ -22,7 +23,10 @@ import { SignInModel } from "./sign-in.model";
     MatLabel,
     MatInput,
     MatError,
-    MatButton
+    MatButton,
+    MatSuffix,
+    MatIconButton,
+    MatIcon
   ],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.scss'
@@ -34,6 +38,7 @@ export class SignInComponent {
   loading: boolean = false;
   error: string = '';
   hide: boolean = true;
+  passwordVisible: WritableSignal<boolean> = signal<boolean>(false);
 
   constructor(
     private fb: FormBuilder,
@@ -80,4 +85,7 @@ export class SignInComponent {
     return this.signInForm.get(control)?.hasError(error);
   }
 
+  switchPass() {
+    this.passwordVisible.set(!this.passwordVisible());
+  }
 }

@@ -1,4 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+/**==================================================================================
+=====================================================================================
+Template Name: Stoom Dashboard - Most Complete Material UI & Bootstrap Admin Template
+Author: qburry
+Support: support@qburry.com
+File: style.scss
+=====================================================================================
+===================================================================================*/
+
+@import 'scss/settings/color-variables';
 
 html, body {
   height: 100%;
@@ -7,6 +16,7 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #666600;
 }
 
 * {
@@ -14,8 +24,13 @@ body {
 }
 
 .stoom-content {
-  padding: 16px !important;
+  background-color: #0074D9;
+  height: 100%;
 }
+
+
+@import 'scss/themes/generic';
+@import 'scss/themes/general';
 
 /*
 .no-gutters {

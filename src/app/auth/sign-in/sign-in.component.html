@@ -1,11 +1,13 @@
-<!--<div class="row no-gutters form-section">
-  <div class="ol-md-7 col-lg-6 col-sm-12 auth-section">-->
-<mat-card class="vw-100">
+<mat-card>
   <mat-card-header>
-    <mat-card-title><img alt="stoom" src="img/stoom_logo.png"/></mat-card-title>
+    <mat-card-title>
+      <img alt="stoom" height="86" src="images/stoom_logo.png"/>
+    </mat-card-title>
     <mat-card-subtitle>stoom</mat-card-subtitle>
   </mat-card-header>
-
+  <div class="error">
+    Invalid Credentials
+  </div>
   <mat-card-content>
     <form [formGroup]="signInForm">
       <div>
@@ -18,9 +20,16 @@
         </mat-form-field>
       </div>
       <div>
-        <mat-form-field appearance="outline" class="vw-100">
+        <mat-form-field appearance="outline" class="w-100">
           <mat-label>Password</mat-label>
-          <input formControlName="password" matInput required type="password">
+          <input [type]="passwordVisible()? 'text': 'password'" formControlName="password" matInput required>
+          <button (click)="switchPass()"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="!passwordVisible()"
+                  mat-icon-button
+                  matSuffix>
+            <mat-icon>{{ passwordVisible() ? 'visibility' : 'visibility_off' }}</mat-icon>
+          </button>
           <mat-error>@if (isControlInvalid('password', 'required')) {
             Password is required
           }</mat-error>
@@ -28,22 +37,18 @@
       </div>
     </form>
   </mat-card-content>
-  <div>
-    <div style="text-align: right; top: -25px; position: relative; font-size: 13px">
+  <div class="auth-form-footer">
+    <div class="auth-forgot-password">
       <a class="link-text" href="#">Forgot password?</a>
     </div>
-    <div class="form-call-to-action">
+    <div>
       <button (click)="onSubmit()"
               [disabled]="!signInForm.valid"
-              class="sign-in-btn" color="primary"
-              mat-flat-button>Sign In
+              class="sign-in-btn"
+              color="primary"
+              mat-flat-button
+      >Sign In
       </button>
     </div>
   </div>
-
 </mat-card>
-<!--</div>
-<div class=" col-md-5 col-lg-6 d-none d-md-block image-section">
-  Image Section
-</div>
-</div>-->
